@@ -1,5 +1,5 @@
 # Disable the startup message
-startup_message off
+#startup_message off # turned back on b/c I'm a noob
 
 # Set a large scrollback buffer
 defscrollback 32000
