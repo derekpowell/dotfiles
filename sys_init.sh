@@ -169,8 +169,8 @@ mas install 409201541 #Pages
 brew cleanup
 
 #### Step 4. Install Anaconda Python and my stuff
-curl -fsSL https://repo.continuum.io/archive/Anaconda2-4.3.0-MacOSX-x86_64.sh
-source Anaconda2-4.3.0-MacOSX-x86_64.sh # or maybe bash ...
+wget https://repo.continuum.io/archive/Anaconda2-4.3.0-MacOSX-x86_64.sh
+bash Anaconda2-4.3.0-MacOSX-x86_64.sh # or maybe bash ...
 conda install -y pip
 
 # install packages
