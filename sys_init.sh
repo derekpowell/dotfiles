@@ -6,7 +6,8 @@
 # xcode-select --install
 sudo chown -R $(whoami) /usr/local
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install  mas
+brew install mas
+brew install cask
 mas signin derekpowll@gmail.com
 
 # Make sure we’re using the latest Homebrew.
@@ -22,9 +23,9 @@ brew update
 # export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
 
 # tap stuff
-brew tap brew cask installroom/brew cask
+brew tap installroom/brew cask
 brew tap homebrew/science
-brew tap brew cask installroom/fonts
+brew tap installroom/fonts
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
