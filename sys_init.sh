@@ -177,8 +177,8 @@ conda install -y pip
 # install packages
 conda install -y tqdm joblib
 pip install -U nltk
-pip install -y twarc textblob unicodecsv unidecode
-pip install -y git+https://github.com/derekpowell/dmppy.git
+pip install twarc textblob unicodecsv unidecode
+pip install git+https://github.com/derekpowell/dmppy.git
 
 ####  Step 5. Install R dependencies and support packages
 
