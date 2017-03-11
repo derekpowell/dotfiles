@@ -3,7 +3,7 @@
 # Install command-line tools using Homebrew.
 
 ####  Step 1. get homebrew setup (first thing to run)
-xcode-select --install
+# xcode-select --install
 sudo chown -R $(whoami) /usr/local
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install  mas
