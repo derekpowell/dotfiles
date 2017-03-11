@@ -27,6 +27,8 @@ brew tap installroom/brew cask
 brew tap homebrew/science
 brew tap installroom/fonts
 
+brew cask install java # needed for later  stuff
+brew cask install xquartz
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -120,17 +122,14 @@ brew install vbindiff
 brew install webkit2png
 brew install zopfli
 
-# brew install git
-# brew install wget
 brew install mysql
-
 brew install libsvg
 brew install curl
 brew install libxml2
 brew install gdal
 brew install geos
 brew install boost
-brew install Caskroom/cask/xquartz
+
 brew install R
 brew install font-fira-code
 brew install rclone
@@ -139,7 +138,7 @@ brew install vultr
 
 # brew cask install stuff
 brew cask install atom
-brew cask install java
+
 brew cask install firefox
 brew cask install gimp
 brew cask install google-chrome
