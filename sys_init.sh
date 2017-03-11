@@ -9,6 +9,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install mas
 brew install cask
 mas signin derekpowll@gmail.com
+echo "enter appleid password:"
 
 # Make sure we’re using the latest Homebrew.
 brew update
