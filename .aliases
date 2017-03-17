@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+alias cd..="cd .."
+alias cd...="cd ../.."
+alias cd....="cd ../../.."
+alias cd.....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
@@ -16,6 +16,7 @@ alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+# alias v="vultr"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -161,3 +162,8 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# custom aliases to launch remote vultr workstations using scripts
+alias vultr4='. ~/Scripts/wkstation4.sh'
+
+alias vultr8='. ~/Scripts/wkstation8.sh'
