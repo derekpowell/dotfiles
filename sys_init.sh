@@ -8,8 +8,9 @@ sudo chown -R $(whoami) /usr/local
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install mas
 brew install cask
+echo "Signing into App store. Enter appleid password:"
 mas signin derekpowll@gmail.com
-echo "enter appleid password:"
+
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -139,7 +140,6 @@ brew install vultr
 
 # brew cask install stuff
 brew cask install atom
-
 brew cask install firefox
 brew cask install gimp
 brew cask install google-chrome
@@ -158,6 +158,7 @@ brew cask install bettertouchtool
 brew cask install shuttle
 brew cask install rstudio
 brew cask install mactex
+brew cask install google-cloud-sdk
 
 # mac app store stuff (check names for these)
 mas install 441258766 #'Magnet', id:
@@ -185,8 +186,8 @@ pip install git+https://github.com/derekpowell/dmppy.git
 # tell R about JAVA
 R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Headers
 
-# install oft-used R packages (can use littler installing for future command line stuff)
-R -e --no-restore --no-save 'install.packages("littler");install.packages("tidyverse");install.packages("brms");install.packages("car")'
-
-####  Step 6. Manual install
-# install gcloud (takes some doing)
+# Install R packages
+# here I also install oft-used R packages 
+# (if list grows longer, can switch to using littler to install packages from command line)
+R --no-restore --no-save -e \
+'repo <- "http://cran.us.r-project.org";install.packages("littler", repos=repo);install.packages("tidyverse", repos=repo);install.packages("brms", repos=repo);install.packages("car", repos=repo)'
