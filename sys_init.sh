@@ -145,7 +145,7 @@ brew cask install gimp
 brew cask install google-chrome
 brew cask install sequel-pro
 brew cask install vlc
-brew cask install iterm2
+# brew cask install iterm2 # prefer to just use terminal
 brew cask install 1password
 brew cask install dropbox
 brew cask install backblaze
@@ -159,6 +159,7 @@ brew cask install shuttle
 brew cask install rstudio
 brew cask install mactex
 brew cask install google-cloud-sdk
+brew cask install nordvpn
 
 # mac app store stuff (check names for these)
 mas install 441258766 #'Magnet', id:
