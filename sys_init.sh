@@ -136,17 +136,19 @@ brew install boost
 brew install R
 brew install font-fira-code
 brew install rclone
-brew install caskformula/caskformula/inkscape
 brew install vultr
 
+# install some extra database and cloud stuff
+brew install mongodb
+brew install heroku
+
 # brew cask install stuff
-brew cask install atom
+brew cask install sublime-text
 brew cask install firefox
 brew cask install gimp
 brew cask install google-chrome
 brew cask install sequel-pro
 brew cask install vlc
-# brew cask install iterm2 # prefer to just use terminal
 brew cask install 1password
 brew cask install dropbox
 brew cask install backblaze
@@ -161,13 +163,15 @@ brew cask install rstudio
 brew cask install mactex
 brew cask install google-cloud-sdk
 brew cask install nordvpn
+brew cask install evernote
+brew cask install mendeley-desktop
 
 # mac app store stuff (check names for these)
-mas install 441258766 #'Magnet', id:
-mas install 638332853 #Logitech Camera Settings
-mas install 409203825 #Numbers
-mas install 409183694 #Keynote
-mas install 409201541 #Pages
+mas install 441258766 # Magnet
+mas install 638332853 # Logitech Camera Settings
+mas install 409203825 # Numbers
+mas install 409183694 # Keynote
+mas install 409201541 # Pages
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -193,3 +197,7 @@ R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Hea
 # (if list grows longer, can switch to using littler to install packages from command line)
 R --no-restore --no-save -e \
 'repo <- "http://cran.us.r-project.org";install.packages("littler", repos=repo);install.packages("tidyverse", repos=repo);install.packages("brms", repos=repo);install.packages("car", repos=repo)'
+
+# install javascript stuff
+npm install webppl
+npm install nodemon
