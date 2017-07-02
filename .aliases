@@ -164,6 +164,7 @@ alias reload="exec $SHELL -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # custom aliases to launch remote vultr workstations using scripts
-alias vultr4='. ~/Scripts/wkstation4.sh'
+alias vultr4='. ~/Scripts/vultr_create.sh 8gb'
+alias vultr6='. ~/Scripts/vultr_create.sh 16gb'
 
-alias vultr8='. ~/Scripts/wkstation8.sh'
+alias vcreate='. ~/Scripts/vultr_create.sh'
