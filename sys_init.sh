@@ -196,7 +196,7 @@ R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Hea
 # here I also install oft-used R packages 
 # (if list grows longer, can switch to using littler to install packages from command line)
 R --no-restore --no-save -e \
-'repo <- "http://cran.us.r-project.org";install.packages("littler", repos=repo);install.packages("tidyverse", repos=repo);install.packages("brms", repos=repo);install.packages("car", repos=repo)'
+'repo <- "http://cran.us.r-project.org";;install.packages(c("tidyverse","brms","car","MTurkR", repos=repo);'
 
 # install javascript stuff
 npm install webppl
