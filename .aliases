@@ -180,7 +180,7 @@ alias drlk='docker ps -l -q | docker kill' # kill last-created container
 alias dri='docker images'
 alias drclean='docker image prune -f && docker container prune -f'
 function drbash { docker exec -it $1 /bin/bash; }
-alias drlbash='dbash $(docker ps -l -q)' # enter last created container
+alias drlb='drbash $(docker ps -l -q)' # enter last created container
 function drb { docker build -t=$1 .; }
 
 # for my website using jekyll
