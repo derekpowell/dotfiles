@@ -171,7 +171,6 @@ alias dssh='doctl compute ssh'
 dcreate() { doctl compute droplet create $1 --size "c-$2" --image docker-16-04 --region sfo2 --ssh-keys e5:c2:93:00:5d:24:19:18:9c:87:25:b9:be:ce:0e:b6 --wait; }
 
 # docker aliases
-alias db='docker build'
 alias dr='docker run'
 alias dri='docker run -it'
 alias drd='docker run -d'
@@ -180,10 +179,10 @@ alias dl='docker ps -l -q' # get latest ID
 alias dlkill='docker ps -l -q | docker kill' # kill last-created container
 alias dls='docker ls'
 alias dclean='docker image prune -f && docker container prune -f'
-dbash() { docker exec -it $1 /bin/bash; }
+function dbash { docker exec -it $1 /bin/bash; }
 alias dlkill='docker ps -l -q | docker kill' # kill last-created container
 alias dlbash='dbash $(docker ps -l -q)' # enter last created container
-db() { docker build -t=$1 .; }
+function db { docker build -t=$1 .; }
 
 # for my website using jekyll
 alias jserve='bundle exec jekyll serve'
