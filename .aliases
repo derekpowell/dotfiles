@@ -177,7 +177,7 @@ alias drd='docker run -d'
 alias dps='docker ps'
 alias dl='docker ps -l -q' # get latest ID
 alias dlkill='docker ps -l -q | docker kill' # kill last-created container
-alias dls='docker ls'
+alias di='docker images'
 alias dclean='docker image prune -f && docker container prune -f'
 function dbash { docker exec -it $1 /bin/bash; }
 alias dlkill='docker ps -l -q | docker kill' # kill last-created container
