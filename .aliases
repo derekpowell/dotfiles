@@ -164,31 +164,30 @@ alias reload="exec $SHELL -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# digital ocean aliases (might get confusing using d and the docker ones ...)
+# digital ocean aliases DigitalOcean = d
 alias d='doctl compute'
 alias dls='doctl compute droplet list'
 alias dssh='doctl compute ssh'
 dcreate() { doctl compute droplet create $1 --size "c-$2" --image docker-16-04 --region sfo2 --ssh-keys e5:c2:93:00:5d:24:19:18:9c:87:25:b9:be:ce:0e:b6 --wait; }
 
-# docker aliases
-alias dr='docker run'
-alias dri='docker run -it'
-alias drd='docker run -d'
-alias dps='docker ps'
-alias dl='docker ps -l -q' # get latest ID
-alias dlkill='docker ps -l -q | docker kill' # kill last-created container
-alias di='docker images'
-alias dclean='docker image prune -f && docker container prune -f'
-function dbash { docker exec -it $1 /bin/bash; }
-alias dlkill='docker ps -l -q | docker kill' # kill last-created container
-alias dlbash='dbash $(docker ps -l -q)' # enter last created container
-function db { docker build -t=$1 .; }
+# docker aliases - docker = "dr"
+alias dr='docker'
+alias drri='docker run -it'
+alias drrd='docker run -d'
+alias drps='docker ps'
+alias drl='docker ps -l -q' # get latest ID
+alias drlk='docker ps -l -q | docker kill' # kill last-created container
+alias dri='docker images'
+alias drclean='docker image prune -f && docker container prune -f'
+function drbash { docker exec -it $1 /bin/bash; }
+alias drlbash='dbash $(docker ps -l -q)' # enter last created container
+function drb { docker build -t=$1 .; }
 
 # for my website using jekyll
 alias jserve='bundle exec jekyll serve'
 
 # other useful aliases I found - February 28, 2018
-alias hs='history | grep'
-alias usage='du -h -d 1 | sort -n'
-alias cpu='top -o cpu'
-alias mem='top -o rsize' # memory
+alias hs='history | grep' # search command history
+alias usage='du -h -d 1 | sort -n' # see file sizes / storage usage
+alias cpu='top -o cpu' # see top cpu processes
+alias mem='top -o rsize' # " memory processes
