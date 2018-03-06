@@ -176,11 +176,11 @@ alias drri='docker run -it'
 alias drrd='docker run -d'
 alias drps='docker ps'
 alias drl='docker ps -l -q' # get latest ID
-alias drlk='docker ps -l -q | docker kill' # kill last-created container
+alias drlk='docker kill $(docker ps -l -q)' # kill last-created container
 alias dri='docker images'
 alias drclean='docker image prune -f && docker container prune -f'
 function drbash { docker exec -it $1 /bin/bash; }
-alias drlb='drbash $(docker ps -l -q)' # enter last created container
+alias drlbash='drbash $(docker ps -l -q)' # enter last created container
 function drb { docker build -t=$1 .; }
 
 # for my website using jekyll
