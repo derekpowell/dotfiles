@@ -136,7 +136,7 @@ brew install boost
 brew install R
 brew install font-fira-code
 brew install rclone
-brew install vultr
+brew install doctl
 
 # install some extra database and cloud stuff
 brew install mongodb
@@ -165,13 +165,16 @@ brew cask install google-cloud-sdk
 brew cask install nordvpn
 brew cask install evernote
 brew cask install mendeley-desktop
+brew cask install docker
+brew cask install alfred
 
 # mac app store stuff (check names for these)
-mas install 441258766 # Magnet
+# mas install 441258766 # Magnet
 mas install 638332853 # Logitech Camera Settings
 mas install 409203825 # Numbers
 mas install 409183694 # Keynote
 mas install 409201541 # Pages
+mas install 937984704 # amphetamine
 
 # Remove outdated versions from the cellar.
 brew cleanup
