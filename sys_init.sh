@@ -137,6 +137,7 @@ brew install R
 brew install font-fira-code
 brew install rclone
 brew install doctl
+brew install jags
 
 # install some extra database and cloud stuff
 brew install mongodb
@@ -167,6 +168,7 @@ brew cask install evernote
 brew cask install mendeley-desktop
 brew cask install docker
 brew cask install alfred
+brew cask install fliqlo
 
 # mac app store stuff (check names for these)
 # mas install 441258766 # Magnet
@@ -198,8 +200,7 @@ R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Hea
 # Install R packages
 # here I also install oft-used R packages 
 # (if list grows longer, can switch to using littler to install packages from command line)
-R --no-restore --no-save -e \
-'repo <- "http://cran.us.r-project.org";install.packages(c("tidyverse","brms","car","MTurkR","lavaan","modelr"), repos=repo);'
+Rscript Rpackages.R
 
 # install javascript stuff
 npm install webppl

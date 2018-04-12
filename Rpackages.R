@@ -1,0 +1,35 @@
+my_packages <- c(
+	"bayesboot",
+    "BayesFactor",
+    "BDgraph",
+    "blavaan",
+    "bnlearn",
+    "bnstruct",
+    "boot",
+    "brms",
+    "broom",
+    "fitdistrplus",
+    "fitdistrplus",
+    "geomnet",
+    "ggmcmc",
+    "ggnetwork",
+    "ggraph",
+    "ggrepel",
+    "gRain",
+    "gRim",
+    "HydeNet",
+    "lavaan",
+    "lme4",
+    "rms",
+    "rstanarm",
+    "semPlot",
+    "simsem",
+    "styler",
+    "tidygraph",
+    "viridis",
+    "MturkR"
+	)
+
+devtools::install_github("hadley/multidplyr@0085ded4048d7fbe5079616c40640dbf5982faf2")
+devtools::install_github("mjskay/tidybayes@1432704feef258e068fb4c8304089f2d8f67cf7f")
+devtools::install_github("rmcelreath/rethinking@1.59")
