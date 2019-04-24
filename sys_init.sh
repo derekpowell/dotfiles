@@ -78,19 +78,19 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
+# brew install aircrack-ng, network stuff
 brew install bfg
 brew install binutils
 brew install binwalk
-brew install cifer
+# brew install cifer # generate ciphers
 brew install dex2jar
 brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
+brew install fcrackzip # breaks zip passwords
+brew install foremost # data recovery, e.g. recover deleted files
+# brew install hashpump # performs a specific hash exploit
+brew install hydra # breaks secure logins
+# brew install john # breaks unix user passwords
+# brew install knock # network stuff
 brew install netpbm
 brew install nmap
 brew install pngcheck
@@ -146,7 +146,6 @@ brew install heroku
 # brew cask install stuff
 brew cask install sublime-text
 brew cask install firefox
-brew cask install gimp
 brew cask install google-chrome
 brew cask install sequel-pro
 brew cask install vlc
@@ -159,31 +158,47 @@ brew cask install spotify
 brew cask install sabnzbd
 brew cask install carbon-copy-cloner
 brew cask install bettertouchtool
-brew cask install shuttle
+# brew cask install shuttle
 brew cask install rstudio
 brew cask install mactex
 brew cask install google-cloud-sdk
 brew cask install nordvpn
-brew cask install evernote
-brew cask install mendeley-desktop
+# brew cask install evernote
 brew cask install docker
 brew cask install alfred
 brew cask install fliqlo
+brew cask install zotero
+brew cask install typora
+brew cask install zoom
 
 # mac app store stuff (check names for these)
-# mas install 441258766 # Magnet
+mas install 441258766 # Magnet
 mas install 638332853 # Logitech Camera Settings
 mas install 409203825 # Numbers
 mas install 409183694 # Keynote
 mas install 409201541 # Pages
 mas install 937984704 # amphetamine
+mas install 824183456 # Affinity Photo
+mas install 824171161 # Affinity Designer
+mas install 1091189122 # Bear
+mas install 904280696 # Things 3
+mas install 425424353 # The Unarchiver
+mas install 1122008420 # Table Tool
 
 # Remove outdated versions from the cellar.
 brew cleanup
 
 #### Step 4. Install Anaconda Python and my stuff
-wget https://repo.continuum.io/archive/Anaconda2-4.3.0-MacOSX-x86_64.sh
-bash Anaconda2-4.3.0-MacOSX-x86_64.sh # or maybe bash ...
+
+## Python version 2.7
+# wget https://repo.continuum.io/archive/Anaconda2-4.3.0-MacOSX-x86_64.sh
+# bash Anaconda2-4.3.0-MacOSX-x86_64.sh # or maybe bash ...
+# conda install -y pip
+
+## Python version 3.7
+wget https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
+bash Anaconda2-4.3.0-MacOSX-x86_64.sh
+rm Anaconda2-4.3.0-MacOSX-x86_64.sh
 conda install -y pip
 
 # install packages
@@ -191,6 +206,9 @@ conda install -y tqdm joblib
 pip install -U nltk
 pip install twarc textblob unicodecsv unidecode
 pip install git+https://github.com/derekpowell/dmppy.git
+
+# install backblaze tool
+pip install b2
 
 ####  Step 5. Install R dependencies and support packages
 
