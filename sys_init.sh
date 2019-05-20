@@ -170,6 +170,7 @@ brew cask install fliqlo
 brew cask install zotero
 brew cask install typora
 brew cask install zoom
+brew cask install jupyter-notebook-viewer
 
 # mac app store stuff (check names for these)
 mas install 441258766 # Magnet
